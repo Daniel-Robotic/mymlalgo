@@ -1,0 +1,35 @@
+# Игнорирование ненужных папок
+notebooks/
+
+
+# Игнорировать стандартные Python артефакты
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/*.py[cod]
+**/*.so
+
+# Игнорировать виртуальные окружения
+.env
+.venv
+env/
+venv/
+envs/
+
+# Игнорировать IDE/редактор файлы
+.vscode/
+.idea/
+.ipynb_checkpoints/
+.vscode/
+.mypy_cache/
+.pytest_cache/
+
+# Coverage
+htmlcov/
+coverage.xml
+uv.lock
+
+# pre-commit
+.pre-commit-config.yaml
+.pre-commit-hooks.yaml
