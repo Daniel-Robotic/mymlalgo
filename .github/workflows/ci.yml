@@ -24,19 +24,10 @@ jobs:
     - name: Install uv
       run: |
         pip install uv
-    
-    - name: Create uv venv and install dependencies
+
+    - name: Create uv venv, install deps, run tests and type checks
       run: |
         uv venv .venv
         source .venv/bin/activate
         uv pip install .[dev]
-
-    - name: Run tests
-      run: |
-        source .venv/bin/activate
         pytest
-
-
-    # - name: Run type checks (mypy)
-    #   run: |
-    #     mypy .
