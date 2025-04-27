@@ -29,5 +29,6 @@ jobs:
       run: |
         uv venv .venv
         source .venv/bin/activate
-        uv pip install .[dev]
+        uv pip install -r pyproject.toml
+        uv pip install -r pyproject.toml --extra dev
         pytest
