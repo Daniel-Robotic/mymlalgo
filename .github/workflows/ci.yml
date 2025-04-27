@@ -25,17 +25,17 @@ jobs:
       run: |
         pip install uv
     
-    - name: Create env
+    - name: Create uv venv and install dependencies
       run: |
-       uv venv
-
-    - name: Install project dependencies
-      run: |
+        uv venv .venv
+        source .venv/bin/activate
         uv pip install .[dev]
 
     - name: Run tests
       run: |
+        source .venv/bin/activate
         pytest
+
 
     # - name: Run type checks (mypy)
     #   run: |
